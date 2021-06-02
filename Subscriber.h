@@ -17,6 +17,8 @@ private:
 	const int MAX_LENGTH_NAME = 20;
 
 public:
+	Subscriber() {};
+
 	Subscriber(const char* name,
 			const char* firstName,
 			const char* patronymic,

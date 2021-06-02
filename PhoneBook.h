@@ -8,11 +8,11 @@ class PhoneBook
 {
 private:
 	int id = 0;
-	Subscriber name;
-	Subscriber array[10];
+	Subscriber* array = new Subscriber[20] {{ "Ivan", "Ivanov", "Ivanovich", 2741712, 2745962, 927947, "Информация" }};
 
 public:
 	// в данном классе используется контруктор по умолчанию
+	PhoneBook() {};
 
 	void getName(int id) {
 		array[id].printSubscriber();
@@ -47,11 +47,11 @@ public:
 		cout << "Введите дополнительную информацию - " << endl;
 		cin >> additionally;
 		
-		Subscriber name = Subscriber("Ivan", "Ivanov", "Ivanovich", 2741712, 2745962, 9279478218, "Информация");
-		array[5] = name;
 
-		Subscriber obj1 = Subscriber(name, firstName, patronymic, homePhoneNumber, workPhoneNumber, mobilePhoneNumber, additionally);
-		array[id++] = obj1;
+		//array[1] = new Subscriber( "Ivan", "Ivanov", "Ivanovich", 2741712, 2745962, 927947, "Информация" );
+
+		//{name, firstName, patronymic, homePhoneNumber, workPhoneNumber, mobilePhoneNumber, additionally}
+		
 	}
 };
 
