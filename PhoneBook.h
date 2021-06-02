@@ -8,50 +8,44 @@ class PhoneBook
 {
 private:
 	int id = 0;
-	Subscriber* array = new Subscriber[20] {{ "Ivan", "Ivanov", "Ivanovich", 2741712, 2745962, 927947, "Информация" }};
+	Subscriber* array[20];
 
 public:
-	// в данном классе используется контруктор по умолчанию
-	PhoneBook() {};
-
-	void getName(int id) {
-		array[id].printSubscriber();
+	Subscriber* getName(int id) {
+		array[1] = new Subscriber( "Ivan", "Ivanov", "Ivanovich", 2741712, 2745962, 927947, "РРЅС„РѕСЂРјР°С†РёСЏ" );
+		return array[id];
 	}
 
 	void addName() {
 		char* name;
-		cout << "Введите имя - " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ - " << endl;
 		cin >> name;
 
 		char* firstName;
-		cout << "Введите фамилию - " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ - " << endl;
 		cin >> firstName;
 
 		char* patronymic;
-		cout << "Введите отчество - " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РѕС‚С‡РµСЃС‚РІРѕ - " << endl;
 		cin >> patronymic;
 
 		long homePhoneNumber;
-		cout << "Введите домашний номер телефона - " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РґРѕРјР°С€РЅРёР№ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° - " << endl;
 		cin >> homePhoneNumber;
 
 		long workPhoneNumber;
-		cout << "Введите рабочий номер телефона - " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ СЂР°Р±РѕС‡РёР№ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° - " << endl;
 		cin >> workPhoneNumber;
 
 		long mobilePhoneNumber;
-		cout << "Введите сотовый номер телефона - " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ СЃРѕС‚РѕРІС‹Р№ РЅРѕРјРµСЂ С‚РµР»РµС„РѕРЅР° - " << endl;
 		cin >> mobilePhoneNumber;
 
 		char* additionally;
-		cout << "Введите дополнительную информацию - " << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ - " << endl;
 		cin >> additionally;
 		
-
-		//array[1] = new Subscriber( "Ivan", "Ivanov", "Ivanovich", 2741712, 2745962, 927947, "Информация" );
-
 		//{name, firstName, patronymic, homePhoneNumber, workPhoneNumber, mobilePhoneNumber, additionally}
 		
 	}
 };
-
